@@ -1,1 +1,3 @@
 data/*
+secret/*
+.env
