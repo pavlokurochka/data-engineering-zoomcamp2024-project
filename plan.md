@@ -1,8 +1,9 @@
 - install Kestra in windows docker
     - mock flaw:
-        - download files
-        - transform with python ?
-        - upload to Google cloud storage
+        + download files
+        + transform with python ?
+        + upload to Google cloud storage
+        - document docker config for GCP secrets
         - dlt to big query
         - dashboard
 - terraform to create google VM
