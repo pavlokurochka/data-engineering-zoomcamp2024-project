@@ -1,3 +1,11 @@
 data/*
 secret/*
 .env
+sqlmesh_duckdb/.cache/*
+sqlmesh_duckdb/logs/*
+sqlmesh_duckdb/macros/__pycache__/*
+sqlmesh_duckdb/models/*_model.sql
+sqlmesh_duckdb/tests/test_full_model.yaml
+sqlmesh_duckdb/audits/assert_positive_order_ids.sql
+sqlmesh_duckdb/seeds/seed_data.csv
+sqlmesh_duckdb/db.db
