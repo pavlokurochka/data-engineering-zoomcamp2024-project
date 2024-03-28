@@ -37,5 +37,10 @@ resource "google_bigquery_dataset" "preparer_dataset" {
   location   = var.location
   delete_contents_on_destroy = true
 }
+resource "google_bigquery_dataset" "sqlmesh__preparer_dataset" {
+  dataset_id = "sqlmesh__preparer_dataset"
+  location   = var.location
+  delete_contents_on_destroy = true
+}
 
 # export GOOGLE_APPLICATION_CREDENTIALS=/home/pavlo/terrademo/keys/my-creds.json
