@@ -9,3 +9,6 @@ sqlmesh_duckdb/tests/test_full_model.yaml
 sqlmesh_duckdb/audits/assert_positive_order_ids.sql
 sqlmesh_duckdb/seeds/seed_data.csv
 sqlmesh_duckdb/db.db
+sqlmesh_bigquery/.cache/*
+sqlmesh_bigquery/logs/*
+sqlmesh_bigquery/macros/__pycache__/*

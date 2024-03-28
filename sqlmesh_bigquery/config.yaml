@@ -1,0 +1,15 @@
+gateways:
+    big_query:
+        connection:
+            type: bigquery
+            method: service-account
+            keyfile: ..\secret\terraform-demo-412002-cbcccc3c0b05.json   
+            project: terraform-demo-412002       
+        state_connection:
+            type: duckdb
+            database: db.db
+
+default_gateway: big_query
+
+model_defaults:
+    dialect: bigquery

@@ -1,0 +1,23 @@
+- name: '`terraform-demo-412002`.`preparer_dataset`.`census_income`'
+  columns:
+    geo_id: STRING
+    est_households_total: INT64
+    est_households_med_income: STRING
+    est_households_mean_income: STRING
+- name: '`terraform-demo-412002`.`preparer_dataset`.`preparer`'
+  columns:
+    full_name: STRING
+    first_name: STRING
+    last_name: STRING
+    credential: STRING
+    address: STRING
+    distance: STRING
+    IsDuplicateOf: FLOAT64
+    taxrpo_name: STRING
+    taxrpo_credentials: STRING
+    taxrpo_dba: STRING
+    taxrpo_address: STRING
+    taxrpo_website: STRING
+    taxrpo_phone: STRING
+    taxrpo_afsp: STRING
+    FoindInZip: INT64
