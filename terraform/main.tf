@@ -35,6 +35,7 @@ resource "google_storage_bucket" "preparer-bucket" {
 resource "google_bigquery_dataset" "preparer_dataset" {
   dataset_id = var.bq_dataset_name
   location   = var.location
+  delete_contents_on_destroy = true
 }
 
 # export GOOGLE_APPLICATION_CREDENTIALS=/home/pavlo/terrademo/keys/my-creds.json
