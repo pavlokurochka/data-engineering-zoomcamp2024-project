@@ -3,7 +3,7 @@ gateways:
         connection:
             type: bigquery
             method: service-account
-            keyfile: ..\secret\terraform-demo-412002-cbcccc3c0b05.json   
+            keyfile: ..\secret\gcp_secret.json
             project: terraform-demo-412002       
         state_connection:
             type: duckdb
