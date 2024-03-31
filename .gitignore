@@ -1,5 +1,5 @@
 data/*
-secret/*
+secret/*secret*
 .env
 sqlmesh_duckdb/.cache/*
 sqlmesh_duckdb/logs/*
