@@ -13,3 +13,6 @@ If running on Windows  add .env file with `COMPOSE_CONVERT_WINDOWS_PATHS=1`
 `base64 -w 0 /d/data-engineering-zoomcamp2024-project/.secret/terraform-demo-412002-cbcccc3c0b05.json >> gcp_secret`
 
 `docker compose up`
+
+
+https://lookerstudio.google.com/reporting/28a6e87a-edf2-401d-9ce2-8f20108768c0/page/hewuD

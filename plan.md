@@ -4,7 +4,7 @@
         + transform with python ?
         + upload to Google cloud storage
         - document docker config for GCP secrets
-        - sqlmesh to big query
+        + sqlmesh to big query
         - dashboard
 - terraform to create google VM
     - install docker
