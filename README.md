@@ -1,34 +1,44 @@
-# data-engineering-zoomcamp2024-project
+# Introduction
 
- https://data.census.gov/table?q=median%20income&g=010XX00US$8600000&y=2022 
+This is final project for Data Engineering Zoomcamp 2024.
 
-## Create Kestra container
+## Problem description
 
-If running on Windows  add .env file with `COMPOSE_CONVERT_WINDOWS_PATHS=1`
+This is a proof of concept project to build a data engineering infrastructure that would execute a pipeline from downloaded datasets to analytical dashboard.
+
+Back in 2018 I had a client on Upwork that commissioned a web scraping script to download US tax preparer data from the  [Directory of Federal Tax Return Preparers with Credentials and Select Qualifications](https://irs.treasury.gov/rpo/rpo.jsf). That script involved a lengthy process facilitated by Selenium driving foreground Chrome sessions. I had an idea to use that dataset for this project combining it with [US Census: Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars)](https://data.census.gov/table?q=median%20income&g=010XX00US$8600000&y=2022) to build a dashboard that would analyze the potential market for tax preparers in California.
+
+Because initial process of obtaining these datasets is quite interactive for the purpose of this exercise I saved raw datasets into a separate public repository: [US Tax Preparers Dataset](https://github.com/pavlokurochka/us_tax_preparers).
+
+## Technologies
+
+- **Cloud**: GCP: Compute Engine VM
+
+- **Infrastructure as code (IaC)**: Terraform, Docker
+
+- **Workflow orchestration**: Kestra
+
+- **Data Warehouse**: BigQuery (mock up development in DuckDB)
+
+- **Batch processing**: SQLMesh, Python.
+
+- **Dashboard**: Looker Studio
 
 
 
-`docker run --pull=always --rm -it -p 8080:8080 --user=root -v /var/run/docker.sock:/var/run/docker.sock -v /tmp:/tmp kestra/kestra:latest-full server local`
+## Data ingestion (batch) & Workflow orchestration
 
-`base64 -w 0 /d/data-engineering-zoomcamp2024-project/.secret/terraform-demo-412002-cbcccc3c0b05.json >> gcp_secret`
+The pipeline runs in a single Kestra flow in a Kestra docker container that runs on Compute Engine VM.
 
+![flow diagram snapshot]()
 
+### Transformations  tasks description
 
+## Transformations (SQLMesh, Python.)
 
-https://lookerstudio.google.com/reporting/28a6e87a-edf2-401d-9ce2-8f20108768c0/page/hewuD
+- Used python to remove unused columns and SQLMesh to create staging views (the idea is to process anything there) and finally a fact view named households_per_preparer_ca.
 
-`chmod +x vm_setup/install_docker.sh
-./install_docker.sh
+## Dashboard
 
-git clone https://github.com/pavlokurochka/data-engineering-zoomcamp2024-project.git
-cd data-engineering-zoomcamp2024-project/
+- Used Google Data Studio to visualize data and create 2 tiles. Visit [Local Tax Preparation Market Analysis](https://lookerstudio.google.com/reporting/28a6e87a-edf2-401d-9ce2-8f20108768c0/page/hewuD).
 
-<<<<<<< HEAD
-docker run --pull=always --rm -it -p 8080:8080 --user=root -e SECRET_GCP_CREDS="$(base64 -w 0 secret/gcp_secret.json)" -v /var/run/docker.sock:/var/run/docker.sock -v /tmp:/tmp kestra/kestra:latest-full server local`
-
-export SECRET_GCP_CREDS="$(base64 -w 0 secret/gcp_secret.json)"
-`docker compose up`
-=======
-export SECRET_GCP_CREDS="$(base64 -w 0 secret/gcp_secret.json)"
-`docker compose up`
->>>>>>> 8bc781b1f681e3306d3d0de3a69e95768102d06c
