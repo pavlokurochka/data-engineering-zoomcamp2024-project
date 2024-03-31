@@ -88,7 +88,7 @@ resource "google_compute_instance" "de-zoomcamp-preparer" {
 
     queue_count = 0
     stack_type  = "IPV4_ONLY"
-    subnetwork  = "projects/terraform-demo-412002/regions/us-west1/subnetworks/default"
+    subnetwork  = "projects/de-zoomcamp-preparer/regions/us-west1/subnetworks/default"
   }
 
   scheduling {

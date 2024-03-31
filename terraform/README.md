@@ -12,12 +12,12 @@ gcloud auth application-default login
 terraform init
 
 # Check changes to new infra plan
-terraform plan -var="project=terraform-demo-412002"
+terraform plan -var="de-zoomcamp-preparer"
 ```
 
 ```shell
 # Create new infra
-terraform apply -var="project=terraform-demo-412002"
+terraform apply -var="de-zoomcamp-preparer"
 ```
 
 ```shell

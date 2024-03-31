@@ -1,6 +1,6 @@
 variable "credentials" {
   description = "My Credentials"
-  default     = "~/terrademo/keys/my-creds.json"
+  default     = "~/data-engineering-zoomcamp2024-project/secret/gcp_secret.json"
   #ex: if you have a directory where this file is called keys with your service account json file
   #saved there as my-creds.json you could use default = "./keys/my-creds.json"
 }
@@ -8,7 +8,7 @@ variable "credentials" {
 
 variable "project" {
   description = "Project"
-  default     = "terraform-demo-412002"
+  default     = "de-zoomcamp-preparer"
 }
 
 variable "region" {
@@ -32,7 +32,7 @@ variable "bq_dataset_name" {
 variable "gcs_bucket_name" {
   description = "My Storage Bucket Name"
   #Update the below to a unique bucket name
-  default     = "terraform-demo-412002-preparer-bucket"
+  default     = "de-zoomcamp-preparer-bucket"
 }
 
 variable "gcs_storage_class" {
