@@ -12,3 +12,7 @@ sqlmesh_duckdb/db.db
 sqlmesh_bigquery/.cache/*
 sqlmesh_bigquery/logs/*
 sqlmesh_bigquery/macros/__pycache__/*
+sqlmesh_bigquery/db.db
+terraform.tf*
+terraform/.terraform/*
+terraform/.terraform*
