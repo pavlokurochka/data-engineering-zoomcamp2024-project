@@ -1,4 +1,6 @@
-# Introduction
+# California tax preparers local market analysis 
+
+## Introduction
 
 This is final project for Data Engineering Zoomcamp 2024.
 
@@ -8,21 +10,21 @@ This is a proof of concept project to build a data engineering infrastructure th
 
 Back in 2018 I had a client on Upwork that commissioned a web scraping script to download US tax preparer data from the  [Directory of Federal Tax Return Preparers with Credentials and Select Qualifications](https://irs.treasury.gov/rpo/rpo.jsf). That script involved a lengthy process facilitated by Selenium driving foreground Chrome sessions. I had an idea to use that dataset for this project combining it with [US Census: Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars)](https://data.census.gov/table?q=median%20income&g=010XX00US$8600000&y=2022) to build a dashboard that would analyze the potential market for tax preparers in California.
 
-Because initial process of obtaining these datasets is quite interactive for the purpose of this exercise I saved raw datasets into a separate public repository: [US Tax Preparers Dataset](https://github.com/pavlokurochka/us_tax_preparers).
+Because initial process of obtaining these datasets is quite interactive, for the purpose of this exercise I saved raw datasets into a separate public repository: [US Tax Preparers Dataset](https://github.com/pavlokurochka/us_tax_preparers).
 
 ## Technologies
 
-- **Cloud**: GCP: Compute Engine VM
+- **Cloud**: GCP: Compute Engine VM.
 
-- **Infrastructure as code (IaC)**: Terraform, Docker
+- **Infrastructure as code (IaC)**: Terraform, Docker.
 
-- **Workflow orchestration**: Kestra
+- **Workflow orchestration**: Kestra.
 
-- **Data Warehouse**: BigQuery (mock up development in DuckDB)
+- **Data Warehouse**: BigQuery (mock up development in DuckDB).
 
 - **Batch processing**: SQLMesh, Python.
 
-- **Dashboard**: Looker Studio
+- **Dashboard**: Looker Studio.
 
 
 
@@ -40,8 +42,8 @@ The pipeline runs in a single Kestra flow in a Kestra docker container that runs
 - **parallel_upload_parquet_to_cloud_storage** upload .parquet files to the GCS bucket.
 - **parallel_bigquery_build_external_table** create BigQuey external tables based on uploaded .parquet files in the GCS bucket.
 - **git_clone**  clone this repo inside Kestra docker container.
-- **create_secret_file** create GCP secret file inside Kestra docker container to be used by sqlmesh.
-- **sqlmesh_apply** run SQL transformations in sqlmesh.
+- **create_secret_file** create the GCP secret file inside Kestra docker container to be used by SQLmesh.
+- **sqlmesh_apply** run SQL transformations in SQLmesh.
 
 ## Transformations (SQLMesh, Python.)
 
@@ -51,13 +53,13 @@ The pipeline runs in a single Kestra flow in a Kestra docker container that runs
 
 ## Dashboard
 
-- Used Google Data Studio to visualize data and create 2 tiles. Visit [Local Tax Preparation Market Analysis](https://lookerstudio.google.com/reporting/28a6e87a-edf2-401d-9ce2-8f20108768c0/page/hewuD).
+- Used Google Data Studio to visualize data and create 2 tiles. Visit [Local Tax Preparation Market Analysis](https://lookerstudio.google.com/s/pjejiDvpkf8).
 
 # How to reproduce the project
 
 ## Setup Cloud & IaC tools (Terraform,Docker)
 
-**Create a new google cloud project named de-zoomcamp-preparer (keep the name same, otherwise it won't work)**
+**Create a new google cloud project named *de-zoomcamp-preparer* (keep the name same, otherwise it won't work)**
 
 Go to `Compute Engine` and enable it.
 
@@ -184,4 +186,26 @@ docker compose up
 Open Kestra UI in your local browser `http://localhost:8080/` . Lookup login and passwod in `docker-compose.yml` .
 
 Go to Flows. Click [Import]. Import `kestra\flows.zip` from you local repo directory.
+
+# Dashboard
+
+I have used Google Data Studio to create a dashboard on top of the SQLMesh models. You can either create your dashboard or simply view my dashboard [here](https://lookerstudio.google.com/s/pjejiDvpkf8).
+
+Here's a screenshot of my dashboard in case you're having any trouble viewing it:
+
+![](pictures/looker_studio_dashboard.png)
+
+I hope you like it. If you have any questions about the project, face any problems while following along or have a suggestion for me, feel free to comment or drop me a DM on  [Linkedin](https://www.linkedin.com/in/kurochka/).
+
+Special thanks 
+
+[Aditya Gupta for yelposphere](https://github.com/itsadityagupta/yelposphere/tree/main) - re-used documentation structure and some setup steps.
+
+Michael Shoemaker @dataslinger6379 for Kestra videos
+
+https://www.youtube.com/watch?v=Jfa4jtLOnIs&t=2076s
+
+https://www.youtube.com/watch?v=hyTYC54tx0I&t=1873s
+
+
 
