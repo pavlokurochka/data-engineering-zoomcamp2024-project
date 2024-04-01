@@ -1,10 +1,10 @@
-- name: '`terraform-demo-412002`.`preparer_dataset`.`census_income`'
+- name: '`de-zoomcamp-preparer`.`preparer_dataset`.`census_income`'
   columns:
     geo_id: STRING
     est_households_total: INT64
     est_households_med_income: STRING
     est_households_mean_income: STRING
-- name: '`terraform-demo-412002`.`preparer_dataset`.`preparer`'
+- name: '`de-zoomcamp-preparer`.`preparer_dataset`.`preparer`'
   columns:
     full_name: STRING
     first_name: STRING

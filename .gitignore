@@ -16,3 +16,4 @@ sqlmesh_bigquery/db.db
 terraform.tf*
 terraform/.terraform/*
 terraform/.terraform*
+sqlmesh_bigquery/db.db.wal
