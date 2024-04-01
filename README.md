@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is final project for Data Engineering Zoomcamp 2024.
+This is final project for [Data Engineering Zoomcamp 2024](https://github.com/DataTalksClub/data-engineering-zoomcamp).
 
 ## Problem description
 
