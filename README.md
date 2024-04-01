@@ -30,7 +30,7 @@ Because initial process of obtaining these datasets is quite interactive for the
 
 The pipeline runs in a single Kestra flow in a Kestra docker container that runs on Compute Engine VM.
 
-![flow diagram snapshot](pictures\kestra_topology.png)
+![flow diagram snapshot](pictures/kestra_topology.png)
 
 ### Transformations  tasks description
 
@@ -47,7 +47,7 @@ The pipeline runs in a single Kestra flow in a Kestra docker container that runs
 
 - Used python to remove unused columns and SQLMesh to create staging views (the idea is to process anything there) and finally a fact view named households_per_preparer_ca.
 
-  ![](pictures\sqlmesh_topology.png)
+  ![](pictures/sqlmesh_topology.png)
 
 ## Dashboard
 
@@ -71,7 +71,7 @@ Go to [IAM & Admin ](https://console.cloud.google.com/iam-admin/iam?project=de-z
 
 - Add these roles in addition to *Viewer* : **Storage Admin** +  **BigQuery Admin**  +  **Compute Admin**
 
-  ![](pictures\add_roles.png)
+  ![](pictures/add_roles.png)
 
 Clone this project
 
@@ -148,11 +148,11 @@ YOU ARE NOW LOGGED IN THE VM MACHINE. Run everything there.
 
 I prefer using VS Code to access the VM. Make you have `Remote - SSH` extension installed. Copy `config` file above into the `.ssh` directory above. Then copy `.ssh` directory to the home directory of your laptop.
 
-![](pictures\local_ssh.png)
+![](pictures/local_ssh.png)
 
 Open remote host in VS Code
 
-![Open remote host in VS Code](pictures\open_remote_host.gif) 
+![Open remote host in VS Code](pictures/open_remote_host.gif) 
 
 Open terminal in this window of VS Code. Cloud Compute VM already has git. Clone this project in VM.
 
@@ -164,7 +164,7 @@ cd data-engineering-zoomcamp2024-project
 
 Copy local downloaded `.json` file into `secret/gcp_secret.json` in VM.
 
-![](pictures\copy_secret.gif)
+![](pictures/copy_secret.gif)
 
 Install Docker
 
