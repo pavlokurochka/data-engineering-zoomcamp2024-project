@@ -209,5 +209,5 @@ https://www.youtube.com/watch?v=Jfa4jtLOnIs&t=2076s
 
 https://www.youtube.com/watch?v=hyTYC54tx0I&t=1873s
 
-[typora.io](https://typora.io/) for an editor that made this readmes my easier to write.
+[typora.io](https://typora.io/) for an editor that made these readmes much easier to write.
 
