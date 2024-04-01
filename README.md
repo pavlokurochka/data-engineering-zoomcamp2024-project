@@ -129,7 +129,7 @@ Host de-zoomcamp-preparer
 ```
 
 Create SSH connection from your pc to the newly created VM
-(Let passphrase empty for simplicity)
+(Leave passphrase empty for simplicity)
 
 ```
 cd .ssh
@@ -148,7 +148,7 @@ ssh de-zoomcamp-youtube
 
 YOU ARE NOW LOGGED IN THE VM MACHINE. Run everything there. 
 
-I prefer using VS Code to access the VM. Make you have `Remote - SSH` extension installed. Copy `config` file above into the `.ssh` directory above. Then copy `.ssh` directory to the home directory of your laptop.
+I prefer using VS Code to access the VM. Make sure you have `Remote - SSH` extension installed. Copy `config` file above into the `.ssh` directory above. Then copy `.ssh` directory to the home directory of your pc.
 
 ![](pictures/local_ssh.png)
 
@@ -201,7 +201,7 @@ I hope you like it. If you have any questions about the project, face any proble
 
 Special thanks 
 
-[Aditya Gupta for yelposphere](https://github.com/itsadityagupta/yelposphere/tree/main) - re-used documentation structure and some setup steps.
+[Aditya Gupta for yelposphere](https://github.com/itsadityagupta/yelposphere/tree/main) - re-used his documentation structure and some setup steps.
 
 Michael Shoemaker @dataslinger6379 for Kestra videos
 
@@ -209,5 +209,5 @@ https://www.youtube.com/watch?v=Jfa4jtLOnIs&t=2076s
 
 https://www.youtube.com/watch?v=hyTYC54tx0I&t=1873s
 
-
+[typora.io](https://typora.io/) for an editor that made this readmes my easier to write.
 
