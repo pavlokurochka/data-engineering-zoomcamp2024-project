@@ -42,7 +42,7 @@ services:
           server:
             basic-auth:
               enabled: true
-              username: "kurochka@kgmail.com" # it must be a valid email address
+              username: "user@some.com" # it must be a valid email address
               password: kestra_cool2024
           repository:
             type: postgres

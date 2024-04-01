@@ -4,7 +4,7 @@ gateways:
             type: bigquery
             method: service-account
             keyfile: ../secret/gcp_secret.json
-            project: terraform-demo-412002       
+            project: de-zoomcamp-preparer      
         state_connection:
             type: duckdb
             database: db.db
