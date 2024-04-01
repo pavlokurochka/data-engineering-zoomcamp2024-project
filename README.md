@@ -187,6 +187,8 @@ Open Kestra UI in your local browser `http://localhost:8080/` . Lookup login and
 
 Go to Flows. Click [Import]. Import `kestra\flows.zip` from you local repo directory.
 
+Execute preparers Flow.
+
 # Dashboard
 
 I have used Google Data Studio to create a dashboard on top of the SQLMesh models. You can either create your dashboard or simply view my dashboard [here](https://lookerstudio.google.com/s/pjejiDvpkf8).
