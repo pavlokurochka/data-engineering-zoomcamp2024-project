@@ -85,7 +85,7 @@ cd data-engineering-zoomcamp2024-project
 
 Copy the downloaded `.json` file into `secret/gcp_secret.json`
 
-Make sure your `gcloud` DSK is set up: [initial setup](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/01-docker-terraform/1_terraform_gcp/2_gcp_overview.md#initial-setup)
+Make sure your `gcloud` SDK is set up: [initial setup](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/01-docker-terraform/1_terraform_gcp/2_gcp_overview.md#initial-setup)
 
 ```bash
 export GOOGLE_APPLICATION_CREDENTIALS="~/data-engineering-zoomcamp2024-project/secret/gcp_secret.json"
