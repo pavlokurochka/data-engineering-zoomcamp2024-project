@@ -48,7 +48,8 @@ The pipeline runs in a single Kestra flow in a Kestra docker container that runs
 ## Transformations (SQLMesh, Python.)
 
 - Used Python to remove unused columns and SQLMesh to create staging views (the idea is to process anything there) and finally a fact view named households_per_preparer_ca.
-
+  **NOTE**: you can check out Python scripts inside: `kestra\flows.zip\company.team.preparers.yml`.
+  
   ![](pictures/sqlmesh_topology.png)
 
 ## Dashboard
